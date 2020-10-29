@@ -1,0 +1,240 @@
+{% load static %}
+<html class="no-js" lang="zxx">
+<head>
+    <title>CRYPTO-CURRANCY</title>
+    <meta name="theme-color" content="#141e30"/>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="icon" href="{% static '' %}">
+    <link rel="stylesheet" href="{% static 'css/mdb.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fontawesome-free.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper.css' %}">
+    <script src="{% static 'js/jquery.min.js' %}"></script>
+    <script src="{% static 'js/mdb.min.js' %}"></script>
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <script src="{% static 'js/fontawesome.js' %}"></script>
+    <style>
+        .text-orange, .text-orange:hover{
+            color: #fd7e14;
+        }
+        .bold{
+            font-weight: bold;
+        }
+        .max-content{
+            width: max-content;
+        }
+        .bg-royal{
+            background: darkslategrey;
+            color: white;
+        }
+        .text-royal{
+            color: darkslategrey;
+        }
+        .image-fluid{
+            max-width: 100%;
+            max-height: 100%;
+            display: block;
+            margin: auto;
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            overflow-x: hidden;
+            background: #fefefe;
+        }
+        .section{
+            padding: 30px;
+        }
+
+
+        .api-provider-nav-link{
+            background: rgba(3, 9, 11, 0.8);
+            width: 100%;
+            height: 60px;
+            display: block;
+            border-radius: 25px;
+        }
+        .api-provider-nav-link:hover{
+            background: rgb(3, 9, 11);
+        }
+
+        .form-card{
+            background: #f4f4f4;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px grey;
+        }
+
+
+
+        .input{
+            height: 40px;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: black;
+            border-bottom: 2px solid grey;
+        }
+
+
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+
+
+    <section class="section">
+        <div class="row d-md-flex justify-content-md-between">
+            <div class="col-md-2 col-sm-4 p-3">
+                <h4 class="text-success text-center"><i class="fas fa-check-circle"></i></h4>
+                <h6 class="text-dark text-center bold">Sign in</h6>
+            </div>
+            <div class="col-md-2 col-sm-4 p-3">
+                <h4 class="text-muted text-center"><i class="fas fa-check-circle"></i></h4>
+                <h6 class="text-dark text-center bold">Connect exchange</h6>
+                <h6 class="text-dark text-center bold">Go to <a href="#!" class="text-info">settings</a>, Need <a href="#!" class="text-info">help</a>?</h6>
+                <h6 class="text-dark text-center bold">Don't have crypto yet? <a href="#!" class="text-info"> Buy cryptocurrency</a>.</h6>
+            </div>
+            <div class="col-md-2 col-sm-4 p-3">
+                <h4 class="text-muted text-center"><i class="fas fa-check-circle"></i></h4>
+                <h6 class="text-dark text-center bold">Start Trading</h6>
+                <h6 class="text-dark text-center bold">Go to <a href="#!" class="text-info">Trading Terminal</a>, Need <a href="#!" class="text-info">help</a>?</h6>
+            </div>
+            <div class="col-md-2 col-sm-4 p-3">
+                <h4 class="text-muted text-center"><i class="fas fa-check-circle"></i></h4>
+                <h6 class="text-dark text-center bold">Try Copy-Trading</h6>
+                <h6 class="text-dark text-center bold">Copy best traders and bots or
+                    top the <a href="#!" class="text-info">Marketplace</a> leaderboard
+                    and get additional earnings.
+                    See <a href="#!" class="text-info">guide</a></h6>
+            </div>
+            <div class="col-md-2 col-sm-4 p-3">
+                <h4 class="text-muted text-center"><i class="fas fa-check-circle"></i></h4>
+                <h6 class="text-dark text-center bold">Try Bots</h6>
+                <h6 class="text-dark text-center bold">Make your first bot? See <a href="#!" class="text-info">guide</a></h6>
+                <h6 class="text-dark text-center bold"> Don't have a TradingView Account?  <a href="#!" class="text-info"> Register now</a>.</h6>
+                <h6 class="text-dark text-center bold"> Don't have bots?  <a href="#!" class="text-info"> See our bot code sample</a>.</h6>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <section class="section">
+        <div class="form-card col-lg-6 col-md-8 col-12 mx-auto p-3">
+            <h2>Create trader account</h2>
+            <form method="post" action="" id="traderAccountForm" class="col-lg-12 col-md-12 col-sm-12 no-padding">
+
+                <div class="form-group">
+                    <h3 class="general-title-h3">Name of the account</h3>
+                    <input type="text" id="traderAccountName" name="traderAccountName" required class="general-input form-control">
+                </div>
+
+
+                <div class="form-group">
+                    <h3 class="general-title-h3">API</h3>
+                    <input type="text" id="traderAccountAPI" name="traderAccountAPI" required class="general-input form-control">
+                </div>
+
+                <div class="form-group">
+                    <h3 class="general-title-h3">Secret</h3>
+                    <input type="text" id="traderAccountSecret" name="traderAccountSecret" required class="general-input form-control">
+                </div>
+
+                <div class="form-group">
+                    <h3 class="general-title-h3">Exchange</h3>
+                    <select id="traderAccountExchange" name="traderAccountExchange" class="form-control">
+                        <option selected="selected" value="0">Select exchange</option>
+                        <option value="1">BINANCE</option>
+                        <option value="2">KRAKEN</option>
+                        <option value="3">FTX</option>
+                        <option value="4">BYBIT</option>
+                        <option value="5">BINANCE-FUTURES</option>
+                        <option value="6">DERIBIT</option>
+                        <option value="7">KUCOIN</option>
+                        <option value="8">OKEX</option>
+                        <option value="9">HITBTC</option>
+                        <option value="10">FTX-US</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <h3 class="general-title-h3">Base Currency</h3>
+                    <select id="traderAccountBC" name="traderAccountBC" required="required" class="form-control">
+                        <option value="" selected="selected">Select currency</option>
+                        <option value="BTC">BTC</option>
+                        <option value="ETH">ETH</option>
+                        <option value="USDT">USDT</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-info">Add</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <section class="section">
+        <div class="pt-5">
+            <div class="p-2">
+                <h3 class="text-info text-center bold">Don't have an exchange account? Sing up now</h3>
+            </div>
+            <div class="row p-2 justify-content-between">
+                <div class="col-lg-2 col-md-4 col-sm-6 p-2">
+                    <a class="api-provider-nav-link" href="#!">
+                        <img class="image-fluid" src="{% static 'img/binancelogo.png' %}">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 p-2">
+                    <a class="api-provider-nav-link" href="#!">
+                        <img class="image-fluid" src="{% static 'img/ftxlogo.png' %}">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 p-2">
+                    <a class="api-provider-nav-link" href="#!">
+                        <img class="image-fluid" src="{% static 'img/deribitlogo.png' %}">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 p-2">
+                    <a class="api-provider-nav-link" href="#!">
+                        <img class="image-fluid" src="{% static 'img/binance2logo.png' %}">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 p-2">
+                    <a class="api-provider-nav-link" href="#!">
+                        <img class="image-fluid" src="{% static 'img/bybitlogo.png' %}">
+                    </a>
+                </div>
+                <div class="col-lg-2 col-md-4 col-sm-6 p-2">
+                    <a class="api-provider-nav-link" href="#!">
+                        <img class="image-fluid" src="{% static 'img/kucoinlogo.png' %}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    {% include 'footer.html' %}
+
+
+</body>
+<script>
+
+</script>
+</html>
